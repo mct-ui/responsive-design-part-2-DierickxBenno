@@ -569,6 +569,14 @@ a:focus {
     transition: color .175s ease-in;
 }
 
+
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+    color: #7373F5;
+}
+
 .c-link-cta::before{
     content: "";
     display: block;
@@ -583,19 +591,10 @@ a:focus {
     transition-property: transform, background-color;
     transition-duration: .175s;
     transition-timing-function: ease-in;
-
-
-}
-
-.c-link-cta,
-.c-link-cta:visited,
-.c-link-cta:active {
-    color: #7373F5;
 }
 
 .c-link-cta::after {
     content:"";
-
 }
 
 .c-link-cta:hover {
@@ -603,8 +602,19 @@ a:focus {
 }
 
 .c-link-cta:hover::after {
-    content:"";
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #7373F5;
     transform: scaleX(1);
+    transform-origin: left;
+    transition-property: transform, background-color;
+    transition-duration: .175s;
+    transition-timing-function: ease-in;
     background-color: #3E3EA8;
 }
 /*------------------------------------*\
