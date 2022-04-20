@@ -189,6 +189,13 @@ a:focus {
     display: flow-root;
 }
 
+/* gradient modifier */
+.o-row-modifier--gradient{
+    background: linear-gradient(to bottom left, #5051DB 100%, #3887F7 100%);
+}
+.o-row-gradient--text{
+    color: #fff;
+}
 /* size modifiers */
 
 .o-row--lg {
@@ -383,6 +390,8 @@ a:focus {
     list-style: none;
     padding: 0;
 }
+
+
 
 
 /*------------------------------------*\
@@ -616,6 +625,67 @@ a:focus {
     transition-duration: .175s;
     transition-timing-function: ease-in;
     background-color: #3E3EA8;
+}
+
+/* cta link inverse */
+.c-link-cta--inverse {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 4px 0;
+    transition: color .175s ease-in;
+}
+
+
+
+.c-link-cta--inverse ,
+.c-link-cta--inverse:visited,
+.c-link-cta--inverse:active {
+    color: #fff;
+}
+
+.c-link-cta--inverse::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(.5);
+    transform-origin: left;
+    transition-property: transform, background-color;
+    transition-duration: .175s;
+    transition-timing-function: ease-in;
+}
+
+.c-link-cta--inverse::after {
+    content:"";
+}
+
+.c-link-cta--inverse:hover {
+    color: #fff;
+}
+
+.c-link-cta--inverse:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition-property: transform, background-color;
+    transition-duration: .175s;
+    transition-timing-function: ease-in;
+    background-color: #fff;
 }
 /*------------------------------------*\
   #UTILITIES
