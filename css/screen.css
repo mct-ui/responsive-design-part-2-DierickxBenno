@@ -247,9 +247,9 @@ a:focus {
     flex-wrap: wrap;
 }
 
-    .o-layout__item {
-        flex-basis: 100%;
-    }
+.o-layout__item {
+    flex-basis: 100%;
+}
 
 /* gutter modifiers, these affect o-layout__item too */
 
@@ -687,6 +687,62 @@ a:focus {
     transition-timing-function: ease-in;
     background-color: #fff;
 }
+
+/*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+    margin: auto;
+    width: 50%;
+
+}
+
+.c-footer__logo {
+    margin: auto;
+    align-items: center;
+}
+
+.c-footer__nav {  
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .c-footer {
+        display: flex;
+        gap: 32px;
+        justify-content: space-between;
+    }
+
+    .c-footer__logo {
+        justify-content: center;
+    }
+
+    .c-footer__nav {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+        
+    }
+
+    .c-footer__logo {
+        content: "";   
+    }
+
+    .c-footer__logo .c-logo {
+        content: ""; 
+    }
+
+    .c-footer__nav {
+        display: block;        
+    }
+}
+
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
@@ -951,6 +1007,8 @@ a:focus {
 .u-color-primary-dark {
     color: #3E3EA8 !important;
 }
+
+
 /*------------------------------------*\
   #MEDIA
 \*------------------------------------*/
@@ -966,6 +1024,7 @@ a:focus {
 /* Extra small devices (portrait phones, less than 576px)
    No media query since this is the default in mobile first design
 */
+
 
 /* Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {}
